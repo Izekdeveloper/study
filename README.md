@@ -25,3 +25,5 @@ python syka_blyat.py
 
 # What's in my project?
 ### It's just my studies bro dont give af about it
+# demo project_1
+<a href="https://study-bice-five.vercel.app/" rel="nofollow">click here</a>
