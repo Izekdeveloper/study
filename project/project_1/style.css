@@ -62,9 +62,10 @@ button {
     transition: all 0.3s ease;
 }
 .input_group_body input:focus + label,
-.input_group_body input:valid + label,
-.input_group_body:hover label {
+.input_group_body input:not(:placeholder-shown) + label,
+.input_group_body:hover label{
     top:-38px;
     font-size:17px;
     transition: all 0.3s ease;
 }
+
