@@ -15,3 +15,4 @@ class Solution:                                             #tao class Solution(
             for j in range(i+1,len(sums)):                  #lap tiep de tim phan tu thu 2,i+1 de tranh lap lai chinh no(khong bi trung voi i)
                 if sums[i] + sums[j] ==target:              #kiem tra neu tong cua 2 phan tu co bang target khong
                     return [i,j]                            #neu bang thi tra ve chi so cua 2 phan tu do
+# dan vao leetcode va bo line 1,2 di la chay duoc
