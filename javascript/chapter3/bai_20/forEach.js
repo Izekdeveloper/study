@@ -34,10 +34,22 @@ console.log("==============================")
 //function
 myClass.forEach(function(value,index){ //foreach lap tung phan tu mot va su dung truc tiep gia tri cua tung phan tu do
     console.log("value = ",value,"index = ",index)
+    /*
+value =  fuck index =  0
+value =  bla index =  1
+value =  ble index =  2
+value =  blu index =  3
+*/
 })
 
 console.log("==============================")
 //arrow function
 myClass.forEach((value,index) => {
     console.log("value = ",value,"index = ",index)
+    /*
+value =  fuck index =  0
+value =  bla index =  1
+value =  ble index =  2
+value =  blu index =  3
+*/
 })
