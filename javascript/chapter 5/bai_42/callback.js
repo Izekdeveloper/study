@@ -38,17 +38,21 @@ console.log("Hoàn thành!");
 });
 */
 console.log("bai 42")
-const greeting = ( name,callback) => {
+const greeting = (name,callback) => { //cu phap callback
     console.log("Xin chao", name)
     callback()
 }
 const hello = () => {
-    console.log("learn callback...")
+    console.log("learn callback...") //in ra learn callback
 }
 
 const hi = () => {
-    console.log("say hi")
+    console.log("say hi") // in ra say hi
 }
+         // 👇 name 
+greeting ("Fuck your momy",hello) //xin chao fuck you momy
+greeting("bla bla",hi) //xin chao bla bla
+greeting("izek",hello) // xin chao izek learn call back...
 
-greeting ("Fuck your momy",hello)
-greeting("bla bla",hi)
+//callback hell
+//stop dung dung no lay luon

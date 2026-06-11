@@ -31,12 +31,12 @@ const doSomeThing = () => {
 return a / b;
 }
 
-try {
+try { //goi ham dosomething
     doSomeThing();
 }
-catch (error){
+catch (error){ //in ra loi neu co
     console.log("co loi xay ra ",error)
 }
 finally {
-    console.log("run final")
+    console.log("run final") //thuc thi code du co loi hay ko loi
 }
