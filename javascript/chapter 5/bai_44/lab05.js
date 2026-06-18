@@ -39,4 +39,4 @@ const fetchData = async () => {
         })
     }
 }
-fetchData() //chay tata ca len o tren
+fetchData() //chay tat ca len o tren

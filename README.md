@@ -13,6 +13,12 @@ git pull origin main --rebase<br>
 git pull origin main --rebase <br>
 git push -f origin main <br>
 
+cd ~/folderALL/folder_mini
+
+gs
+ga
+gc "fix bug"
+gp
 
 ## install
 pip install -r requirements.txt <br>

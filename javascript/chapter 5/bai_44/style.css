@@ -12,7 +12,7 @@
     border : 1px solid black;
     padding: 8px;
 }
-.listUser tr:nth-child(even) {
+.listUser tr:nth-child(even) { /* xóa màu nền (chỉnh thành màu trắng) cho các hàng chẵn (hàng 2, 4, 6...) trong bảng */
     background-color: #ffffff;
 }
 
