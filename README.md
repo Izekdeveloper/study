@@ -13,12 +13,12 @@ git pull origin main --rebase<br>
 git pull origin main --rebase <br>
 git push -f origin main <br>
 
-cd ~/folderALL/folder_mini
-
-gs
-ga
-gc "fix bug"
-gp
+cd ~/folderALL/folder_mini <br>
+git init <br>
+ga <br>
+gc "init" <br>
+git remote add origin git@github.com:Izekdeveloper/botdiscord.git  <br>
+gp origin main <br>
 
 ## install
 pip install -r requirements.txt <br>

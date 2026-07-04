@@ -1,0 +1,32 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.info_label_input input,.info_label_input button{
+    gap:10px;
+    display:flex;
+}
+
+.blogTodo {
+    width:100%;
+    color:black;
+    border-collapse: collapse;
+}
+.blogTodo td,.blogTodo th {
+    border:1px solid black;
+    padding:2px;
+}
+.blogTodo tr:nth-child(even){
+    background-color: rgba(11, 11, 11, 0.529);
+}
+.blogTodo tr:hover {
+    background-color: rgba(185, 184, 184, 0.208);
+}
+
+.blogTodo th {
+    padding-bottom:12px;
+    padding-top:12px;
+    text-align: left;
+    background-color: rgba(3, 103, 3, 0.763);
+    color:white;
+}

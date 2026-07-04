@@ -1,22 +1,22 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
-.info {
+.info_table {
     width: 100%;
     color: black;
     border-collapse: collapse;
 }
-.info td, .info th {
+.info_table td, .info_table th {
     border:1px solid black;
     padding:8px;
 }
-.info tr:nth-child(even) {
+.info_table tr:nth-child(even) {
     background-folor:#ffff;
 }
-.info tr:hover {
+.info_table tr:hover {
     background-color: rgba(144, 143, 143, 0.1);
 }
-.info th {
+.info_table th {
     padding-bottom:12px;
     padding-top:12px;
     text-align:left;

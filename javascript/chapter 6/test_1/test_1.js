@@ -43,31 +43,74 @@ const id = button.getAttribute('data-id');
 
 console.log("bai 45")
 
-const btn = document.querySelector(".btn")
-const input = document.querySelector(".inputName")
+const saveBtn = document.querySelector(".btnSave");
+const input = document.querySelector(".inputName");
 
-btn.addEventListener("click",() => {
-    const newTodo = {
+if(saveBtn) {
+saveBtn.addEventListener("click",() => {
+const info_id_name = {
         id: Date.now(), //random id
         name: input.value //lay gia tri value cua input
     }
-   localStorage.setItem("name",JSON.stringify(input.value)) // chuyen sang chuoi string
-   localStorage.setItem("id",newTodo.id) //lay id trong newTodo
-   console.log(newTodo) //in ra newTodo
 
-   const tbody = document.getElementById("btn")
-if(newTodo && newTodo.length) { 
-    newTodo.forEach((user,index) => {
-        tbody.innerHTML += 
-        `
-         <tr> 
-                <td>${user.id}</td>
-                <td>${user.name}</td>
-                <td>
-                    <button> ${"xoa"}</button>
-                </td>
-            </tr>
-        `
+    const currentTodoStr = localStorage.getItem("todo")
+    //da ton tai todo trc do
+    if(currentTodoStr ) {
+        //convert string to object
+        const currentTodo = JSON.parse(currentTodoStr)
+        //push them todo
+        currentTodo.push(info_id_name)
+        localStorage.setItem("todo",JSON.stringify(currentTodo)) // convert object to string
+    }else {
+   localStorage.setItem("todo",JSON.stringify([info_id_name])) // convert object to string
+    }
+    //success
+    window.location.href="./index.html";
     });
 }
-})
+const generalTodoTable = () => {
+    const todoListStr = localStorage.getItem("todo"); //get item in localstorage
+    if(todoListStr){
+    const todoList = JSON.parse(todoListStr); // convert string to object
+    console.log(todoList);
+    //insert data in html
+    const tbody = document.querySelector(".info_table tbody");
+    if(todoList && todoList.length ){
+        todoList.forEach((todo,index) => {
+            tbody.innerHTML += 
+            `
+            <tr>
+            <td>${todo.id}</td>
+            <td>${todo.name}</td>
+            <td><button data-id=${todo.id}
+            class="btnDelete" >xoa</button></td>
+            </tr>
+            `
+        });
+    }
+
+    }
+}
+generalTodoTable()
+
+const deleteBtns = document.querySelectorAll(".btnDelete")
+if(deleteBtns) {
+    deleteBtns.forEach((btn,index) =>{
+        console.log(btn,index)
+        btn.addEventListener("click",() => {
+            const id =  btn.getAttribute("data-id")
+            handleDeleteTodo(id)
+        })
+    })
+}
+
+const handleDeleteTodo = (id) => {
+    const todoListStr = localStorage.getItem("todo");
+    if(todoListStr){
+    const todoList = JSON.parse(todoListStr);
+    console.log(todoList, id)
+    const newTodo = todoList.filter((todo,index) => todo.id +"" !== id);
+    localStorage.setItem("todo", JSON.stringify(newTodo))
+    window.location.reload();
+    }
+}
